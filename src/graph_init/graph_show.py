@@ -8,7 +8,7 @@ from sklearn.neighbors import NearestNeighbors
 from mpl_toolkits.mplot3d import Axes3D
 
 # === 1. Lecture des CSV ===
-nodes_df = pd.read_csv("Data/adsSim_data_nodes.csv")  # ou grand dataset
+nodes_df = pd.read_csv("Data/adsSim_data_nodes.csv")  
 queries_df = pd.read_csv("Data/queries_structured.csv")
 
 # === 2. Nettoyage des colonnes ===
