@@ -13,7 +13,7 @@ L’objectif est d’identifier rapidement les profils publicitaires similaires 
 
 ### 2️ Cloner le dépôt
 ```bash
-git clone https://github.com/ton-utilisateur/ton-projet.git
+git clone https://github.com/MADEinFEUR/Pub_Sim
 cd ton-projet
 ```
 
