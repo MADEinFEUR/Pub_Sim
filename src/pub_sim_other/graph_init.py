@@ -6,22 +6,13 @@ from sklearn.neighbors import NearestNeighbors
 from scipy.spatial.distance import cdist
 from sklearn.decomposition import PCA
 
-import importlib.util
-import os
-
-module_name = "graph_template"
-module_path = os.path.join(os.path.dirname(__file__), "graph_template.py")
-spec = importlib.util.spec_from_file_location(module_name, module_path)
-graph_template = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(graph_template)
-
 
 
 
 
 
 # --- Chargement des données ---
-df_nodes = pd.read_csv('Data/adsSim_data_nodes.csv')
+df_nodes = pd.read_csv('Data\small_data.csv')
 df_queries = pd.read_csv('Data/queries_structured.csv')
 
 print("Aperçu de small_data.csv :")
@@ -149,22 +140,4 @@ plt.title('Comparaison du nombre de nœuds trouvés par requête')
 plt.legend()
 plt.show()
 
-
-
-
-# Distribution des distances pour la première requête (naïf)
-distances_naive = [dist for _, dist in all_results[77]['found_nodes']]
-plt.hist(distances_naive, bins=20, alpha=0.7, label='Naïf (50D)')
-
-# Distribution des distances pour la première requête (PCA)
-distances_pca = [dist for _, dist in all_results_reduced[77]['found_nodes']]
-plt.hist(distances_pca, bins=20, alpha=0.7, label='PCA (10D)')
-
-plt.xlabel('Distance pondérée')
-plt.ylabel('Nombre de nœuds')
-plt.title('Distribution des distances pour la première requête')
-plt.legend()
-plt.show()
-# Utilisation de la fonction
-graph_template.visualize_graph(G)
 
