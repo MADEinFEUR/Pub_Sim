@@ -14,7 +14,6 @@ L’objectif est d’identifier rapidement les profils publicitaires similaires 
 ### 2️ Cloner le dépôt
 ```bash
 git clone https://github.com/MADEinFEUR/Pub_Sim
-cd ton-projet
 ```
 
 ### 3️ Installer les dépendances
@@ -32,6 +31,7 @@ pip install -r requirements.txt
 │   ├── queries_structured.csv         # Données des requêtes
 │
 ├── src/
+│   ├── pub_sim_other/              # autres script de comparaison
 │   ├── TD_pub_sim_A3MSI_2.py      # Script principal
 │
 ├── requirements.txt
